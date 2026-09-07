@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        
+        <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+        <title>Log In</title>
+    </head>
+
+<body>
+    <a onclick="openForm('login')">Login</a>
+    <div class="overlay" id="overlay" onclick="closeForm()"></div>
+    <div class="popup" id="popup">
+        <span class="close" onclick="closeForm()">✖</span>
+
+        <div class="login-form">
+        <form action="" class="login-left">
+            <div class="login-left-title">
+                <h2>Log in to your account</h2>
+                <h3>The journey to finding your dream home starts today!</h3>
+                <hr>
+            </div>
+
+            <label for="email" class="visually-hidden">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your Email" class="login-inputs" required>
+
+            <label for="password" class="visually-hidden">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" class="login-inputs" required></textarea>
+                
+            <button type="login" class="login-btn">Log in</button>
+            <h3 class="forgot-password"><a href="#">Forgot Password?</a></h3>
+            <p class="register-text" id=register-text onclick="switchForm('register')">Don't have an account with us? Register now</p>
+        </form>
+        <div class="register-form">
+            <form action="" class="login-left">
+            <div class="login-left-title">
+                <h2>Create an account</h2>
+                <hr>
+            </div>
+
+            <label for="firstname" class="visually-hidden">First Name</label>
+            <input type="firstname" id="firstname" name="firstname" placeholder="First Name" class="login-inputs" required>
+
+            <label for="lastname" class="visually-hidden">Last Name</label>
+            <input type="lastname" id="lastname" name="lastname" placeholder="Last Name" class="login-inputs" required></input>
+
+            <label for="email" class="visually-hidden">Email</label>
+            <input type="email" id="email" name="email" placeholder="Email" class="login-inputs" required>
+
+            <label for="password" class="visually-hidden">Password</label>
+            <input type="password" id="password" name="password" placeholder="Password" class="login-inputs" required></input>
+
+            <label for="password2" class="visually-hidden">Re-enter password</label>
+            <input type="password2" id="password2" name="password2" placeholder="Re-enter password" class="login-inputs" required></input>
+                
+            <button type="login" class="login-btn">Click to Register</button>
+            <p class="login-text" id=login-text onclick="switchForm('login')">Already have an account with us? Login here</p>
+        </div>
+        
+        
+    </div>
+    </div>
+
+
+    
+
+
+    <style>
+        .login-form{
+            height:550px;
+            display:flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .login-left{
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 20px;
+            justify-content: left;
+            align-items: left;
+        }
+        .login-left-title h2{
+            font-weight: 300px;
+            font-size: 40px;
+            margin-bottom: 5px;
+            
+        }
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+        }
+        .login-inputs{
+            width: 400px;
+            height: 50px;
+            border: none;
+            outline:auto;
+            padding-left: 25px;
+            font-weight: 500;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #666;
+            border-radius: 10px;
+        }
+        .login-btn{
+            width:200px;
+            height: 50px;
+            border: auto;
+            font-weight: bold;
+            font-size: 15px;
+            outline: auto;
+            border-radius: 10px;
+            color: black;
+            background-color: rgb(164, 221, 164);
+            cursor: pointer;
+        }
+        .login-btn:hover{
+            opacity: 0.5s;
+            text-decoration: underline;
+            color: white;
+            box-shadow: 0 0 0 5px #ba1ad65f;
+        }
+        .forgot-password{
+            margin-bottom: 0;
+        }
+        .register-text{
+            margin-top: 0;
+        }
+        .login-text{
+            margin-top: 0;
+        }
+    </style>
+</body>
+</html>

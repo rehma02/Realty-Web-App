@@ -1,0 +1,434 @@
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin:0;
+    padding: 0;
+    background-color: rgb(250, 249, 246);
+    overflow-x: hidden;
+}
+.header{
+    padding-top: 60px;
+    padding-left: 10px;
+
+}
+.header h1{
+    color: rgb(255, 255, 255);
+    position: fixed;
+    z-index: 1001;
+    left: 16;
+    top: 0;
+    margin: 0;
+    line-height: 50px;
+}
+.tagline{
+    text-align: center;
+    font-weight: 700;
+    font-size: 25px;
+    margin: 10px 0;
+    
+}
+
+.btn-group{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:50px;
+    background: rgb(164, 221, 164);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    padding-right: 16px;
+    position: fixed;
+    z-index: 1000;
+}
+
+.btn-group a {
+    background-color: #8fb1eb;
+    color: #fcfcf9;
+    text-decoration: none;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 65px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 5px;
+    left: 10;
+    transition: all 0.3s ease;
+}
+.btn-group a:hover{
+    opacity: 0.8;
+    text-decoration: underline;
+    color: white;
+    box-shadow: 0 0 0 5px #ba1ad65f;
+}
+.btn-group a.login-button{
+    background-color: white;
+    margin-right: 15px;
+    color: rgb(0, 0, 0);
+    font-size: 15px; 
+}
+.search-bar{
+    display: flex;
+    flex-shrink: 1;
+    min-width: 0;
+    order:-1;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 2px solid #8fb1eb;
+    height: 32px;
+    margin-left: 120px;
+    
+    
+}
+.search-bar input {
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    font-size: 15px;
+    font-family: inherit;
+    width: 100%;
+    background: transparent;
+}
+.search-btn{
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    height: 100%;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background-color 0.3s ease;
+}
+.search-btn:hover {
+    background: #6a97d4;
+}
+
+
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+    display: none;
+    z-index: 1000;
+}
+.overlay.active{
+    display: block;
+}
+.popup{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.3s ease;
+    width: 450px;
+    padding: 30px;
+    background-color: aliceblue;
+    box-shadow: 0 0 30px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    z-index: 1002;
+    overflow-y: auto;
+    max-height: 90vh;
+}
+.popup.active{ 
+    transform: translate(-50%, -50%) scale(1);
+} 
+.close{
+    position: absolute;
+    top: 0;
+    right: 10px;
+    padding: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.loginform, .registerform{
+    height:500px;
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    box-sizing: border-box;
+}
+.loginform a, .registerform a{
+    color: rgb(44, 129, 74);
+    cursor: pointer;
+    text-decoration: underline;
+}
+        
+.login-left, .register-left{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+
+}
+.login-left-title h2, .register-left-title h2{
+    font-weight: 300px;
+    font-size: 40px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+.login-left-title h3, .register-left-title h3{
+    text-align: center;
+}
+.login-inputs{
+    width: 100%;
+    height: 50px;    
+    box-sizing: border-box;
+    border: 2px solid #979393;
+    padding-left: 25px;
+    font-weight: 500;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #666;
+    border-radius: 10px;
+}
+.reg-inputs{
+    width: 100%;
+    height: 40px;    
+    box-sizing: border-box;
+    border: 2px solid #979393;
+    padding-left: 25px;
+    font-weight: 500;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #666;
+    border-radius: 10px;
+}
+.login-btn, .register-btn{
+    width:200px;
+    height: 50px;
+    border: auto;
+    font-weight: bold;
+    font-size: 15px;
+    outline: auto;
+    border-radius: 10px;
+    color: black;
+    background-color: rgb(164, 221, 164);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    }
+.login-btn:hover, .register-btn:hover{
+    opacity: 0.5s;
+    text-decoration: underline;
+    color: white;
+    box-shadow: 0 0 0 5px #ba1ad65f;
+    }
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    justify-content: center;
+    }
+        
+
+.forgot-password{
+    margin-bottom: 0;
+    }
+
+.login-text, .register-text{
+    margin-top: 0;
+    font-size: 18px;
+    }
+
+.filter-bar{
+    margin-top: 20px;
+    height: 30px;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding-left: 120px;
+    
+    
+}
+.price-filter, .bedroom-filter, .bath-filter{
+    padding: 0 10px;
+    height: 30px;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: rgb(196, 227, 250);
+    border: 2px solid #7cb5ec;
+    border-radius: 15px;
+    cursor: pointer;
+
+}
+
+.properties-grid{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    padding: 10px;
+    margin-top: 20px;
+    justify-content: center;
+}
+.properties-cards{
+    width: 350px;
+    background-color: white;
+    margin-left: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: box-shadow 0.3s ease;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.properties-cards img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+   
+}
+.properties-cards:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+
+.favourite-btn{
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    background: rgb(255, 255, 255);
+    border: none;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 16px;
+    z-index: 1;
+    
+
+}
+.favourite-btn .fa-solid {
+    color: red;
+}
+
+.favourite-btn:hover {
+    background: white;
+}
+.container{
+    margin-top: 0;
+    padding: 5px 16px;
+}
+.footer{
+    background-color: rgb(164, 221, 164);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 30px 20px 10px 20px;
+    gap: 10px;
+    align-items: start;
+    margin-top: 40px;
+    
+}
+.footer-left h3{
+    margin: 0 0 5px 0;
+}
+.footer-left a{
+    font-weight: 600;
+    text-decoration: none;
+    color: inherit;
+    margin-right: 8px;
+    transition: color 0.2s ease
+}
+
+.footer-left a:hover{
+    text-decoration: underline;
+    color: white;
+    
+}
+.footer-social{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+    
+    
+}
+.footer-social a {
+    color: inherit;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.footer-social a:hover {
+    opacity: 0.5;
+}
+.social-heading{
+    margin: 0;
+    font-weight: 600;
+}
+.social-icons{
+    display: flex;
+    gap: 16px;
+    font-size: 22px;
+}
+
+.footer-bottom {
+    grid-column: 1/-1;
+    text-align: center;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    padding-top: 10px;
+    font-size: 13px;
+}
+
+
+@media only screen and (max-width: 768px){
+     .btn-group a.login-button {
+        width: auto; 
+        height: auto; 
+        font-size: 14px; 
+        padding: 6px 12px;
+        white-space: nowrap;
+    }
+    .search-bar{
+        width: 100%;
+        display: flex;
+        align-items: left;
+    
+    }
+    .btn-group{
+        width: 100%;
+    }
+    .header h1{
+        display: flex;
+    }
+    .filter-bar{
+        margin-top: 20px;
+        height: 30px;
+        gap: 30px;
+        align-items: center;
+        justify-content: center;
+        padding-left: 80px;
+        
+    }
+    .properties-grid{
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 1em;
+        grid-row-gap: 50px;
+        place-items: center;
+        
+    }
+    .popup{
+        width: 80%;
+        padding: 20px;
+        height: 500px;
+        
+    }
+    .loginform{
+        width: 100%;
+        padding: 20px;
+
+    
+    }
+}

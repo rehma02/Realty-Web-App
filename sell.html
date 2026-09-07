@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="images/favicon-16x16.png">
+        <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sell With Us</title>
+    </head>
+    <body>
+        <header class="header">
+            <a href="index.html">
+            <h1>Realty</h1>
+            </a>
+        </header>
+        <nav class="btn-group">
+            <a class="button" href="index.html?type=sale">Buy</a>
+            <a class="button" href="sell.html">Sell</a>
+            <a class="button" href="index.html?type=rent">Rent</a>
+            <a class="button" href="contact.html">Contact</a>
+            <div class="search-bar">
+                <input type="text" placeholder="Search by location...">
+                <button class="search-btn">🔍</button>
+            </div>
+            <a class="login-button" href="#login">Log In</a>
+        </nav>
+        <div class="contact-form">
+            <form action="" class="contact-left">
+                <div class="contact-left-title">
+                    <h2>Interested in Selling?</h2>
+                    <h3>Contact Us Today!</h3>
+                    <hr>
+                </div>
+                <label for="name" class="visually-hidden">Name</label>
+                <input type="text" id="name" name="name" placeholder="Name" class="contact-inputs" required>
+
+                <label for="email" class="visually-hidden">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="E-mail" class="contact-inputs" required>
+
+                <label for="phone" class="visually-hidden">Phone Number</label>
+                <input type="phone" id="phone" name="phone" placeholder="Phone Number" class="contact-inputs" required>
+
+                <label for="message" class="visually-hidden">Message</label>
+                <textarea id="message" name="message" placeholder="Message Us..." class="contact-inputs" required></textarea>
+                
+                <button type="submit" class="submit-btn">Submit Form</button>
+            </form>
+            <img src="images/selling_home.jpg">
+        </div>
+
+        <section class="faq-section">
+            <h2>FAQ About Selling Your Home</h2>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How much does it cost to sell a home?</span>
+                </button>
+                <div class="faq-answer">
+                    <p>When budgeting for the cost of selling your home, you'll need to take into consideration the costs of staging, 
+                       real estate commission, legal fees and potentially, a mortgage penalty.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>When should I sell my house?</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Historically, February, March and September have been the months with the highest sold price to asking price ratio; 
+                       those months are notorious for some of the fiercest bidding wars in Toronto. December and January are historically the slowest months, 
+                       but depending on the type of property you own, having fewer competing properties in slow months might be a huge benefit to you. 
+                       It's best to discuss the advantages and disadvantages of timing the listing of your home  with an experienced real estate agent.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Should I sell before buying?</span>
+                </button>
+                <div class="faq-answer">
+                    <p>The answer to this depends on your personal goals and what's happening in the real estate market. 
+                    If you're buying an in-demand property and selling a less desirable one, you'll likely want to sell before buying.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How do I accurately price my home?</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Pricing your home is an important step when selling your home. Often, the asking price is determined by the home's condition, 
+                        the desirability of your neighbourhood, and the supply and demand for homes in your area. 
+                        A real estate agent provides valuable input when pricing your home for sale.</p>
+                </div>
+            </div>
+             <div class="faq-item">
+                <button class="faq-question">
+                    <span>How long does the selling process usually take?</span>
+                </button>
+                <div class="faq-answer">
+                    <p>On average, expect around 2-3 months total, roughly 30-45 days to get an accepted offer, 
+                        plus another 30-60 days to close. Pricing competitively and having your home market-ready 
+                        can significantly speed this up, sometimes to under two weeks for an offer.</p>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class = "footer-left">
+                <h3>Realty</h3>
+                <p>Finding your dream home, made simple.</p>
+                <a href="about.html" target="_blank">About Us</a>
+                <a href="contact.html">Contact</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Use</a>
+            </div>
+            
+            <div class="footer-social">
+                <p class="social-heading">Follow Our Socials</p>
+                <div class="social-icons">
+                    <a href = "https://www.instagram.com" target="_blank" ><i class="fa-brands fa-instagram"></i></a>
+                    <a href = "https://www.facebook.com" target="_blank" ><i class="fa-brands fa-facebook"></i></a>
+                    <a href = "https://www.x.com" target="_blank" ><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Realty. All rights reserved.</p>
+            </div>
+        </footer>
+    <style>
+    body{
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+    
+    .contact-form{
+        height:550px;
+        display:flex;
+        align-items:center;
+        justify-content: space-evenly;
+    }
+    .contact-left{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 20px;
+        justify-content: left;
+        align-items: left;
+    }
+    .contact-left-title h2{
+        font-weight: 450;
+        font-size: 40px;
+        margin-bottom: 5px;
+        
+        
+    }
+    .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    }
+    .contact-inputs{
+        width: 400px;
+        height: 50px;
+        border: none;
+        outline:auto;
+        padding-left: 25px;
+        font-weight: 500;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #666;
+        border-radius: 10px;
+    }
+    .submit-btn{
+        width:200px;
+        height: 50px;
+        border: auto;
+        font-weight: bold;
+        font-size: 15px;
+        outline: auto;
+        border-radius: 10px;
+        color: black;
+        background-color: rgb(164, 221, 164);
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+    }
+    .submit-btn:hover{
+        opacity: 0.5s;
+        text-decoration: underline;
+        color: rgb(164, 221, 164);
+        background-color: white;
+        
+    }
+    .contact-form img{
+        height: 450px;
+        width:500px;
+        border-radius: 5px;
+        margin-left: 0;
+    }
+    .faq-section{
+        padding: 20px;
+        margin: 40px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    }
+    .faq-question{
+        height:50px;
+        width: 100%;
+        text-align: left;
+        font-size: 20px;
+        font-weight: 550;
+        background-color: rgb(207, 239, 251);
+        border-radius: 5px;
+        opacity: 1;
+        border: none;
+        transition: background-color 0.2s ease;
+        cursor: pointer;
+        justify-content: space-between;
+        gap: 10px;
+    }
+    .faq-question:hover{
+        background-color: rgb(229, 239, 246);
+
+    }
+    .faq-answer{
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+        color: black;
+        line-height: 1.6;
+        font-size: 18px;
+    }
+    .faq-answer p{
+        padding-bottom: 20px;
+    }
+    .faq-item{
+        margin-bottom: 20px;
+        margin-top: 25px;
+        border-bottom: none;
+    }
+    .faq-item.active .faq-answer{
+    max-height: 300px;
+    
+    }
+
+    
+    @media only screen and (max-width: 768px) {
+   
+    .contact-form {
+        height: auto;
+        padding: 100px 20px 40px 20px;
+        justify-content: center;
+        display: grid;
+        row-gap: 30px;
+        margin-bottom: 0;
+        
+    }
+
+    .contact-left {
+        width: 100%;
+        max-width: 400px;
+        margin-top: 0;
+    }
+
+    .contact-inputs {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .submit-btn {
+        width: 100%;
+    }
+
+    .contact-left-title h2 {
+        font-size: 28px;
+    }
+    .contact-form img{
+        width: 450px;
+        height: 400px;
+        
+    }
+    .faq-section{
+        margin-top: 0;
+    }
+    .faq-question{
+        font-size: 15px;
+        font-weight: 550;
+    }
+    .faq-answer{
+        font-size: 15px;
+    }
+}
+
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const faqQuestions = document.querySelectorAll(".faq-question");
+
+            faqQuestions.forEach(question => {
+                question.addEventListener("click", () => {
+                    const faqItem = question.parentElement;
+
+                    document.querySelectorAll(".faq-item").forEach(item => {
+                        if(item != faqItem){
+                            item.classList.remove("active");
+                        }
+                    });
+                    faqItem.classList.toggle("active");
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+

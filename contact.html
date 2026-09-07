@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="images/favicon-16x16.png">
+        <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact Us</title>
+    </head>
+    <body>
+        <header class="header">
+            <a href="index.html">
+            <h1>Realty</h1>
+            </a>
+        </header>
+        <nav class="btn-group">
+            <a class="button" href="index.html?type=buy">Buy</a>
+            <a class="button" href="sell.html">Sell</a>
+            <a class="button" href="index.html?type=rent">Rent</a>
+            <a class="button" href="contact.html">Contact</a>
+            <div class="search-bar">
+                <input type="text" placeholder="Search by location...">
+                <button class="search-btn">🔍</button>
+            </div>
+            <a class="login-button" href="#login">Log In</a>
+        </nav>
+        <div class="contact-form">
+            <form action="" class="contact-left">
+                <div class="contact-left-title">
+                    <h2>Contact Us</h2>
+                    <hr>
+                </div>
+                <label for="name" class="visually-hidden">Name</label>
+                <input type="text" id="name" name="name" placeholder="Name" class="contact-inputs" required>
+
+                <label for="email" class="visually-hidden">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="E-mail" class="contact-inputs" required>
+
+                <label for="phone" class="visually-hidden">Phone Number</label>
+                <input type="phone" id="phone" name="phone" placeholder="Phone Number" class="contact-inputs" required>
+
+                <label for="message" class="visually-hidden">Message</label>
+                <textarea id="message" name="message" placeholder="Message Us..." class="contact-inputs" required></textarea>
+                
+                <button type="submit" class="submit-btn">Submit Form</button>
+            </form>
+
+        </div>
+        <footer class="footer">
+            <div class = "footer-left">
+                <h3>Realty</h3>
+                <p>Finding your dream home, made simple.</p>
+                <a href="about.html" target="_blank">About Us</a>
+                <a href="contact.html">Contact</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Use</a>
+            </div>
+            
+            <div class="footer-social">
+                <p class="social-heading">Follow Our Socials</p>
+                <div class="social-icons">
+                    <a href = "https://www.instagram.com" target="_blank" ><i class="fa-brands fa-instagram"></i></a>
+                    <a href = "https://www.facebook.com" target="_blank" ><i class="fa-brands fa-facebook"></i></a>
+                    <a href = "https://www.x.com" target="_blank" ><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Realty. All rights reserved.</p>
+            </div>
+        </footer>
+    <style>
+    
+    .contact-form{
+        height:550px;
+        display:flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .contact-left{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 20px;
+        justify-content: left;
+        align-items: left;
+    }
+    .contact-left-title h2{
+        font-weight: 300px;
+        font-size: 40px;
+        margin-bottom: 5px;
+        
+    }
+    .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    }
+    .contact-inputs{
+        width: 400px;
+        height: 50px;
+        border: none;
+        outline:auto;
+        padding-left: 25px;
+        font-weight: 500;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #666;
+        border-radius: 10px;
+    }
+    .submit-btn{
+        width:200px;
+        height: 50px;
+        border: auto;
+        font-weight: bold;
+        font-size: 15px;
+        outline: auto;
+        border-radius: 10px;
+        color: black;
+        background-color: rgb(164, 221, 164);
+        cursor: pointer;
+    }
+    .submit-btn:hover{
+        opacity: 0.5s;
+        text-decoration: underline;
+        color: white;
+        box-shadow: 0 0 0 5px #ba1ad65f;
+    }
+    
+    @media only screen and (max-width: 768px) {
+    .contact-form {
+        height: auto;
+        padding: 40px 20px 40px 20px;
+        justify-content: center;
+    }
+
+    .contact-left {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .contact-inputs {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .submit-btn {
+        width: 100%;
+    }
+
+    .contact-left-title h2 {
+        font-size: 28px;
+    }
+}
+    </style>
+    
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="images/favicon-16x16.png">
+        <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+        <title>About Us</title>
+    </head>
+    <body>
+        <header class="header">
+            <a href="index.html">
+            <h1>Realty</h1>
+            </a>
+        </header>
+        <nav class="btn-group">
+            <a class="button" href="index.html?type=sale">Buy</a>
+            <a class="button" href="sell.html">Sell</a>
+            <a class="button" href="index.html?type=rent">Rent</a>
+            <a class="button" href="contact.html">Contact</a>
+            <div class="search-bar">
+                <input type="text" placeholder="Search by location...">
+                <button class="search-btn">🔍</button>
+            </div>
+            <a class="login-button" href="#login">Log In</a>
+        </nav>
+        <div class="about">
+            <h1>About Us</h1>
+            <div class="about_content">
+                <div class="about_text">
+                    <p>At Realty, we believe that finding a place to call home or 
+                    making your next big property investment should be
+                    simple, transparent, and rewarding.</p>
+                    <p>Realty is a modern real estate marketplace designed to connect
+                    buyers, sellers, renters, and agents 
+                    all in one place.</p>
+                    <p>Whether you are searching for your dream suburban house,
+                    looking for an urban apartment to rent, or selling a commercial property,
+                    our platform brings the entire market right to your fingertips.</p>
+                    <p>Contact us today for any inquiries!</p>
+                </div>
+                <img src="images/house_keys.jpg">
+            </div>
+        </div>
+        <footer class="footer">
+            <div class = "footer-left">
+                <h3>Realty</h3>
+                <p>Finding your dream home, made simple.</p>
+                <a href="about.html" target="_blank">About Us</a>
+                <a href="contact.html">Contact</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Use</a>
+            </div>
+            
+            <div class="footer-social">
+                <p class="social-heading">Follow Our Socials</p>
+                <div class="social-icons">
+                    <a href = "https://www.instagram.com" target="_blank" ><i class="fa-brands fa-instagram"></i></a>
+                    <a href = "https://www.facebook.com" target="_blank" ><i class="fa-brands fa-facebook"></i></a>
+                    <a href = "https://www.x.com" target="_blank" ><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Realty. All rights reserved.</p>
+            </div>
+        </footer>
+    <style>
+    .about h1{
+        margin-bottom: 20px;
+        padding-top: 20px;
+        padding-left: 20px;
+    }
+    .about_content{
+        padding: 20px;
+        display: flex;
+        align-items: flex-start;
+        font-size: large;
+        justify-content: space-between;
+        gap: 40px;
+    }
+    .about_text{
+        flex:1;
+        min-width: 0;
+        max-width: 40%;
+        font-size: 20px;
+    }
+    .about_text p{
+        text-indent: 2em;
+        text-align: justify;
+        margin-bottom: 1em;
+       
+    }
+    .about img{
+        height: 400px;
+        width:480px;
+        border-radius: 10px;
+        margin-left: 0;
+    }
+
+    @media only screen and (max-width: 768px) {
+    .about_content {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 1em;
+        grid-row-gap: 20px;
+    }
+
+    .about_text {
+        max-width: 100%;
+    }
+
+    .about img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        margin-left: 0;
+    }
+}
+    </style>
+    </body>
+</html>

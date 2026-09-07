@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link rel="shortcut icon" href="images/favicon-16x16.png">
+        <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+        <title>Realty</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header class="header">
+            <a href="index.html"><h1>Realty</h1></a>
+            <p class="tagline">Welcome to Realty!</p>
+        </header>
+        <nav class="btn-group">
+            <a class="button" href="index.html?type=sale">Buy</a>
+            <a class="button" href="sell.html">Sell</a>
+            <a class="button" href="index.html?type=rent">Rent</a>
+            <a class="button" href="contact.html">Contact</a>
+            <div class="search-bar">
+                <input type="text" placeholder="Search by location..."></input>
+                <button class="search-btn">🔍</button>
+            </div>
+            <a onclick="openForm('login')" class="login-button">Login</a>
+        </nav>
+        <div class="overlay" id="overlay" onclick="closeForm()"></div>
+            <div class="popup" id="popup">
+                <span class="close" onclick="closeForm()">✖</span>
+
+                <div id="loginform" class="loginform">
+                    <form action="" class="login-left">
+                        <div class="login-left-title">
+                            <h2>Log in to your account</h2>
+                            <h3>The journey to finding your dream home starts today!</h3>
+                            <hr>
+                        </div>
+
+                        <label for="email" class="visually-hidden">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your Email" class="login-inputs" required></input>
+
+                        <label for="password" class="visually-hidden">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Enter your password" class="login-inputs" required></input>
+                            
+                        <button type="login" class="login-btn">Log in</button>
+                        <h3 class="forgot-password"><a>Forgot Password?</a></h3>
+                        <p class="register-text" id=register-text onclick="switchForm('register')">Don't have an account with us? Click here to <a>Register</a></p>
+                    </form>
+                </div>
+                <div id="registerform" class="registerform">
+                    <form action="" class="register-left">
+                    <div class="register-left-title">
+                        <h2>Create an account</h2>
+                        <hr>
+                    </div>
+
+                    <label for="firstname" class="visually-hidden">First Name</label>
+                    <input type="firstname" id="firstname" name="firstname" placeholder="First Name" class="reg-inputs" required></input>
+
+                    <label for="lastname" class="visually-hidden">Last Name</label>
+                    <input type="lastname" id="lastname" name="lastname" placeholder="Last Name" class="reg-inputs" required></input>
+
+                    <label for="email" class="visually-hidden">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Email" class="reg-inputs" required></input>
+
+                    <label for="password" class="visually-hidden">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Password" class="reg-inputs" required></input>
+
+                    <label for="password2" class="visually-hidden">Re-enter password</label>
+                    <input type="password2" id="password2" name="password2" placeholder="Re-enter password" class="reg-inputs" required></input>
+                            
+                    <button type="register" class="register-btn">Click to Register</button>
+                    <p class="register-text" id=register-text onclick="switchForm('login')">Already have an account with us? <a>Login here</a></p>
+                    </form>
+                </div>
+                
+            </div>
+
+            
+        <div class="filter-bar">
+            <select class="price-filter">
+                <option value="">All Prices</option> 
+                <option value="900000">Under $900,000</option>
+                <option value="1000000">Under $1,000,000</option>
+                <option value="1200000">Under $1,200,000</option>
+                <option value="1500000">Under $1,500,000</option>
+                <option value="2000000">Under $2,000,000</option>
+            </select>
+            <select class="bedroom-filter">
+                <option value="">All Bedrooms</option>
+                <option value="3">3+ Bedrooms</option>
+                <option value="4">4+ Bedrooms</option>
+                <option value="5">5+ Bedrooms</option>
+                <option value="6">6+ Bedrooms</option>
+            </select>
+            <select class="bath-filter">
+                <option value="">All Baths</option>
+                <option value="3">3+ Baths</option>
+                <option value="4">4+ Baths</option>
+                <option value="5">5+ Baths</option>
+            </select>
+        </div>
+        <div class="properties-grid">
+        </div>  
+        <footer class="footer">
+            <div class = "footer-left">
+                <h3>Realty</h3>
+                <p>Finding your dream home, made simple.</p>
+                <a href="about.html" target="_blank">About Us</a>
+                <a href="contact.html" target="_blank">Contact</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Use</a>
+            </div>
+            
+            <div class="footer-social">
+                <h3 class="social-heading">Follow Our Socials</h3>
+                <div class="social-icons">
+                    <a href = "https://www.instagram.com" target="_blank" ><i class="fa-brands fa-instagram"></i></a>
+                    <a href = "https://www.facebook.com" target="_blank" ><i class="fa-brands fa-facebook"></i></a>
+                    <a href = "https://www.x.com" target="_blank" ><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Realty. All rights reserved.</p>
+            </div>
+        </footer>
+       
+    <script src="app.js"></script>
+    </body>
+    
+
+
+
+
+
+
+
+</html>
