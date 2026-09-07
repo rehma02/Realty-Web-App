@@ -57,7 +57,7 @@ function renderListings(filteredListings){
 }
 async function loadListings(){
     try{
-        const response = await fetch('http://127.0.0.1:5000/api/listings');
+        const response = await fetch('https://realty-backend-1-j9fa.onrender.com/api/listings');
         const data = await response.json();
         listings = data.listings;
         
